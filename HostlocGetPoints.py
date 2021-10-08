@@ -195,8 +195,7 @@ class HostlocGetPoints():
             'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36'}
         text = parse.quote(text)
         # 修改为自己的bot api token
-        post_url = 'https://api.telegram.org/bot{}/sendMessage' \
-                   '?parse_mode=MarkdownV2&chat_id={}&text={}'.format(bot_api, chat_id, text)
+        post_url = 'https://api.telegram.org/bot{}/sendMessage?parse_mode=MarkdownV2&chat_id={}&text={}'.format(bot_api, chat_id, text)
         try:
             requests.get(post_url, headers=headers)
             print('推送成功')
